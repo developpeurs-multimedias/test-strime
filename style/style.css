@@ -1,0 +1,22 @@
+body {
+    max-width: 100%;
+}
+.keyboard {
+    display: none;
+    width: 90%;
+    position: relative;
+}
+
+.keyboard--show {
+    display: flex;
+    width: 100%;
+}
+
+.keyboard--img {
+    width: 100%;
+    position: absolute;
+}
+
+.keyboard-key{
+    
+}
