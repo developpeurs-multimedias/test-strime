@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Le Clavier numérique</title>
+        <link rel="stylesheet" type="text/css" href="style/style.css" />
+        
+    </head>
+    <body>
+        <textarea class="textarea">
+
+        </textarea>
+        <section class="keyboard">
+            <img src="asset/clavier_numerique.png" alt="clavier numérique" class="keyboard--img" 
+            usemap="#keybordImg"/>
+            <map name="keybordImg">
+                <area
+                  shape="a"
+                  coords="0,222,380,113"
+                  alt="a"
+                  onclick="document.querySelector('.textarea').value = `${document.querySelector('.textarea').value}a`"
+                 />
+                 <area
+                   shape="b"
+                   coords=""
+                   alt="b"
+                   onclick="document.querySelector('.textarea').value = `${document.querySelector('.textarea').value}b`"
+                  />
+              </map>
+        </section>
+    </body>
+    <script>
+        var textarea = document.querySelector('.textarea')
+        var keyboard = document.querySelector('.keyboard')
+        document.addEventListener('DOMContentLoaded', init, false)
+        function init () {
+            textarea.addEventListener('click', (e)=> areaFocus(e),false)
+        }
+        function areaFocus (e){
+            keyboard.classList.add('keyboard--show')
+        }
+    </script>
+</html>
